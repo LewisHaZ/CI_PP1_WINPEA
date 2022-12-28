@@ -10,6 +10,7 @@
     <meta name="keywords" content="jewellery, fashion, brand">
 
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="script.js" defer></script>
     <title>Winpea</title>
 </head>
 
@@ -42,10 +43,10 @@
 
     </header>
     <section aria-label="Brand Photos">
-        <div class="carousel">
-            <button class="carousel-button prev">&#10502;</button>
-            <button class="carousel-button next">&#10503;</button>
-        <ul>
+        <div class="carousel" data-carousel>
+            <button class="carousel-button prev" data-carousel-button="prev">&#10502;</button>
+            <button class="carousel-button next" data-carousel-button="next">&#10503;</button>
+        <ul data-slides>
             <li class="slide" data-active>
                 <img src="./assets/images/brooke-cagle-kElEigko7PU-unsplash.jpg" alt="lady wearing jewellery image #1">
             </li>
