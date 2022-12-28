@@ -16,13 +16,13 @@
 
 <body>
     <header>    
-        <nav class="nav">
-            <div>
+        <nav class="navbar">
+            <div class="container-icon">
             <a href="index.html">
                 <img class="primary-logo" src="./assets/images/6aa944e6b20864f42b7109b973ef3c00.webp" alt="website logo">
             </a>
         </div>
-            <ul class ="nav navlist">
+            <ul class ="nav-list" id="navi-list">
                 <li class="list-item">
                     <a href="index.html">Home</a>
                 </li>
@@ -42,6 +42,11 @@
                     <a href="contactus.html">Contact Us</a>
                 </li>
             </ul>
+            <div class="menu" id="toggle-button">
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+            </div>
         </nav>
     </header>
     <section aria-label="Brand Photos">
@@ -88,5 +93,12 @@
         <div>Copyright of Winpea</div>
     </footer>
 </body>
+<script>
+    const toggleButton = document.getElementById('toggle-button')
+    const naviList = document.getElementById('navi-list')
 
+    toggleButton.addEventListener('click' , () => {
+        naviList.classList.toggle('active');
+    })
+</script>
 </html>
