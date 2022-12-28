@@ -1,13 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&family=Proza+Libre&display=swap');
 
-*{
+*, *::before, *::after{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     border: none;
 }
 
 body{
+    margin: 0;
     font-family: Proza Libre, sans-serif;
     font-weight: 300;
     color: #3a3a3a;
+}
+
+.carousel{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.slide{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+
+.carousel > ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.slide > img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slide[data-active]{
+    opacity: 1;
+}
+
+.carousel-button{
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, .5);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    background-color: rgba(0, 0, 0, .1);
+
+}
+
+.carousel-button:hover,
+.carousel-button:focus{
+    color: white;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.carousel-button:focus{
+    outline: 1px solid black;
+}
+
+.carousel-button.prev{
+    left: 1rem;
+}
+
+.carousel-button.next{
+    right: 1rem;
 }
